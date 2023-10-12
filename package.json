@@ -1,0 +1,24 @@
+{
+  "name": "timeline",
+  "version": "1.0.0",
+  "description": "Timeline creation app",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && npm run server",
+    "clear": "rm -rf build",
+    "build": "npm run clear && tsc",
+    "server": "node build/server.js"
+  },
+  "author": "andrey3aytsev",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.19",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
+    "eslint": "^8.51.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
