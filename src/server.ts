@@ -1,4 +1,8 @@
 import express from "express";
+import { ENV } from "./env";
 
 const app = express();
-app.listen(3000, () => console.log("server started on port 3000"));
+
+app.listen(ENV.serverPort, () =>
+  console.log(`server started on port ${ENV.serverPort}`)
+);
