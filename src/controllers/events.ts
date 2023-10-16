@@ -21,7 +21,7 @@ class EventsController {
     return EventsModel.findByPk(req.params.id)
       .then((result) => {
         if (result) return res.status(200).send(result);
-        return res.status(404).send({ Message: 'Word not found' });
+        return res.status(404).send({ Message: 'Event not found' });
       })
       .catch((error) => errorHandler(res, error));
   }
