@@ -3,17 +3,21 @@ import { Model, DataTypes } from 'sequelize';
 
 class EventsModel extends Model {
   public id: string;
-  public descriptions: string;
+  public description: string;
   public start_date: string;
   public end_date: string;
 }
 
 EventsModel.init(
   {
-    id: { type: DataTypes.UUID, primaryKey: true },
-    descriptions: { type: DataTypes.STRING },
-    start_date: { type: DataTypes.DATE },
-    end_date: { type: DataTypes.DATE },
+    id: {
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
+    },
+    description: { type: DataTypes.STRING },
+    start_date: { type: DataTypes.DATE, allowNull: false },
+    end_date: { type: DataTypes.DATE }
   },
   {
     sequelize,

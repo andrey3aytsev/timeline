@@ -4,7 +4,7 @@ import { Model, DataTypes } from 'sequelize';
 class PeriodsModel extends Model {
   public id: string;
   public name: string;
-  public descriptions: string;
+  public description: string;
   public start_date: string;
   public end_date: string;
 }
@@ -13,7 +13,7 @@ PeriodsModel.init(
   {
     id: { type: DataTypes.UUID, primaryKey: true },
     name: { type: DataTypes.STRING },
-    descriptions: { type: DataTypes.STRING },
+    description: { type: DataTypes.STRING },
     start_date: { type: DataTypes.DATE },
     end_date: { type: DataTypes.DATE },
   },

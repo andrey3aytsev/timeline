@@ -4,14 +4,14 @@ import { Model, DataTypes } from 'sequelize';
 class TagsModel extends Model {
   public id: string;
   public name: string;
-  public descriptions: string;
+  public description: string;
 }
 
 TagsModel.init(
   {
     id: { type: DataTypes.UUID, primaryKey: true },
     name: { type: DataTypes.STRING },
-    descriptions: { type: DataTypes.STRING },
+    description: { type: DataTypes.STRING },
   },
   {
     sequelize,
