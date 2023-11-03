@@ -2,7 +2,7 @@ import { sequelize } from './index';
 import { Model, DataTypes } from 'sequelize';
 
 class PeriodsModel extends Model {
-  public id: string;
+  public declare id: string;
   public name: string;
   public description: string;
   public start_date: string;
@@ -23,9 +23,5 @@ PeriodsModel.init(
     timestamps: false,
   }
 );
-
-PeriodsModel.sync()
-  .then(() => console.log('PeriodsModel has been synchronized successfully.'))
-  .catch((err) => console.error('Unable to sync PeriodsModel:', err));
 
 export { PeriodsModel };
